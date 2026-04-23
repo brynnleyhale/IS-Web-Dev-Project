@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Faith & Focus Builder</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="#">Faith + Focus</a>
+        <a href="scratch.html">Scratch Page</a>
+    </div> <br><br>
+
+<style>
+body {
+    font-family: Georgia, serif;
+    background-color: #fbf4f6;
+    text-align: center;
+    padding: 20px;
+}
+
+.left {text-align: left;}
+
+h1 {
+    color: black;
+}
+
+.card {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: rgb(235, 121, 140);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(250, 184, 195);
+}
+
+.output {
+    font-size: 18px;
+    color: #3c3636;
+}
+
+.small {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+a{color: white;
+text-decoration: underline;
+text-align: left;}
+
+a:hover{font-style: underline;
+font-weight: bold;
+font-size: 18px;}
+
+a:visited{color: rgb(255, 255, 255);
+text-align: left;}
+
+</style>
+</head>
+
+<body>
+    <div class="body.input">
+        <h1>Faith & Focus Daily Builder</h1>
+        <p class="small">Generate a daily mindset, challenge, and reflection to help you stay grounded and productive.</p>
+
+        <div class="card">
+            <h3>Step 1: Your Daily Focus</h3>
+            <button onclick="generateFocus()">Generate Focus</button>
+            <div class="output" id="focus"></div>
+        </div>
+
+        <div class="card">
+            <h3>Step 2: Your Challenge</h3>
+            <button onclick="generateChallenge()">Get Challenge</button>
+            <div class="output" id="challenge"></div>
+        </div>
+
+        <div class="card">
+            <h3>Step 3: Reflection Prompt</h3>
+            <button onclick="generateReflection()">Reflect</button>
+            <div class="output" id="reflection"></div>
+        </div>
+
+        <script>
+            const focuses = [
+            "Stay disciplined in your studies today.",
+            "Trust the process even when results are not immediate.",
+            "Choose consistency over motivation.",
+            "Focus on long-term purpose, not short-term stress.",
+            "Approach today with gratitude and intention."
+            ];
+
+            const challenges = [
+    "Complete your hardest assignment first.",
+    "Study for 30 minutes without distractions.",
+    "Help someone else succeed today.",
+    "Avoid procrastination for one full study session.",
+    "Write down 3 academic goals for the week."
+];
+
+            const reflections = [
+    "How did my actions today reflect my long-term goals?",
+    "Where did I rely on discipline instead of motivation?",
+    "What did I learn about my ability to persist?",
+    "How did faith or mindset influence my choices today?",
+    "What can I improve tomorrow?"
+];
+
+            function generateFocus() {
+    document.getElementById("focus").innerText =
+        focuses[Math.floor(Math.random() * focuses.length)];
+}
+
+            function generateChallenge() {
+    document.getElementById("challenge").innerText =
+        challenges[Math.floor(Math.random() * challenges.length)];
+}
+
+            function generateReflection() {
+    document.getElementById("reflection").innerText =
+        reflections[Math.floor(Math.random() * reflections.length)];
+}
+        </script>
+    </div>
+</body>
+</html> 
